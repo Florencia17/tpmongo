@@ -17,7 +17,7 @@ public class MongoGenericService {
 
     protected  <T> T inTx(Function<MongoCollection<Document>, T> toExecute, String collectionName) {
         MongoClient mongoClient = this.getMongoClient();
-        database = mongoClient.getDatabase("local");
+        database = mongoClient.getDatabase("test");
         collection = database.getCollection(collectionName);
         try {
             T t = toExecute.apply(collection);

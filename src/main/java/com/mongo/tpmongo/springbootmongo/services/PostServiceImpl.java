@@ -100,7 +100,7 @@ public class PostServiceImpl extends MongoGenericService implements PostService 
                                         .date(LocalDate.parse(document.getString("date"), DateTimeFormatter.ofPattern("yyyy-MM-dd")))
                                         .build())
                                 .into(new ArrayList<>())
-                ,"posts");
+                ,"post");
 
     }
 
